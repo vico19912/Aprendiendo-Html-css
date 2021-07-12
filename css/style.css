@@ -62,6 +62,13 @@ h1 span{
     text-align: center;
 }
 
+.sombra{
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
 @media ( min-width: 480px){
     .boton{
         width:auto;
@@ -106,6 +113,7 @@ h1 span{
     background-size: cover;
     height: 45rem;
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .contenido-hero{
@@ -124,3 +132,36 @@ h1 span{
     color: var(--blanco);
 }
 
+@media ( min-width: 768px){
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat( 3, 1fr );
+        column-gap: 5rem;
+    }
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3{
+    color: var(--secundario);
+    font-weight: normal;
+}
+
+.servicio p{
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
