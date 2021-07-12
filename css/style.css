@@ -10,6 +10,14 @@
 html{
     font-size: 62.5%;/* sirve para ajustar 1rem = 10px*/
     box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+
+.servicios,
+.navegacion-principal,
+.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 *,*:before, *:after{
@@ -60,6 +68,29 @@ h1 span{
     border-radius: .5rem;
     width: 90%;
     text-align: center;
+    border: none;
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+
+.w-sm-100{
+    width: 100%;
+}
+
+@media ( min-width: 768px){
+    .w-sm-100{
+        width: auto;
+    }
+}
+
+.alinear-derecha{
+    justify-content: flex-end;
+}
+
+.flex{
+    display: flex;
 }
 
 .sombra{
@@ -165,3 +196,46 @@ h1 span{
     justify-content: space-evenly;
     align-items: center;
 }
+
+.formulario{
+    background-color: var(--gris);
+    width: min( 60rem, 100% ); /*Toma el mas pequeño*/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
+.contenedor-campos{
+
+}
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    display: block;
+}    
+
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-bottom: 0.5rem;
+}
+
